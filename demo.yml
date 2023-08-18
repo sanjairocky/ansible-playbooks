@@ -1,7 +1,8 @@
 ---
 - name: Stop MariaDB service
   user: sanjai
-  hosts: localhost
+  hosts: 
+    - 192.168.0.165
   become: yes
   tasks:
     - name: mariadb stopped and not running
