@@ -1,0 +1,11 @@
+---
+- name: Stop MariaDB service
+  user: sanjai
+  hosts: test
+  become: yes
+  tasks:
+    - name: mariadb stopped and not running
+      service:
+        name: mariadb
+        enabled: false
+        state: inactive
